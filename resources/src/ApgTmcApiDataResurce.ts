@@ -15,7 +15,7 @@ export class ApgTmcApiDataResurce extends Drash.Resource {
 
 
     public GET(request: Drash.Request, response: Drash.Response) {
-        const JSON_PATH = 'data/Tmc/';
+            const JSON_PATH = 'data/';
         try {
             const data: any = {};
 
