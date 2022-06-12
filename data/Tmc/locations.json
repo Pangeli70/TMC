@@ -1,0 +1,70 @@
+[
+  {
+    "ID": "Man",
+    "name": "Massacratoio",
+    "town": "Maniago (PN)",
+    "address": "Via Armentarezza, 15",
+    "svg": "SalaManiago",
+    "lan": "Router Gigabit 24 porte",
+    "seats": [
+      {
+        "ID": "P1",
+        "name": "Antro di Vecna",
+        "coordX": 250,
+        "coordY": 823
+      },
+      {
+        "ID": "P2",
+        "name": "Picco della disperazione",
+        "coordX": 250,
+        "coordY": 823
+      },
+      {
+        "ID": "P3",
+        "name": "Carne da macello",
+        "coordX": 250,
+        "coordY": 823
+      },
+      {
+        "ID": "P4",
+        "name": "Scudo umano",
+        "coordX": 250,
+        "coordY": 823
+      }
+    ]
+  },
+  {
+    "ID": "Vaj",
+    "name": "Fightclub",
+    "town": "Vajont (PN)",
+    "address": "Via Carducci, 14/B",
+    "svg": "SalaVajont",
+    "lan": "Router Wifi 128Mbit 8porte",
+    "seats": [
+      {
+        "ID": "P1",
+        "name": "Intreccio di cavi",
+        "coordX": 250,
+        "coordY": 823
+      },
+      {
+        "ID": "P2",
+        "name": "Wifi non prende",
+        "coordX": 250,
+        "coordY": 823
+      },
+      {
+        "ID": "P3",
+        "name": "Niubberia",
+        "coordX": 250,
+        "coordY": 823
+      },
+      {
+        "ID": "P4",
+        "name": "Covo dei druidi",
+        "coordX": 250,
+        "coordY": 823
+      }
+    ]
+  }
+]

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" ,>
+
+<head>
+    <title>Team Macinacapre</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="APG Angeli Paolo Giusto">
+    <meta name="description" content="Team Macinacapre">
+    <meta name="generator" content="Deno+Drash+Vue+Mongo">
+    <meta name="keywords" content="Deno, Drash, Vue, Mongo, APG, Angeli Paolo, Paolo Angeli">
+    <meta name="application-name" content="APG-TMC">
+
+    <!-- Favicon -->
+    <link rel='shortcut icon' type='image/x-icon' href='/public/ico/favicon.ico'>
+
+    <!-- Css -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="/public/css/picoCustom.css">
+
+    <!-- Vue.js -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="/public/js/vue/main.js"></script>
+
+    <!-- background -->
+    <style>
+        /* html {
+            background-image: url('/public/img/jpg/background1.jpg');
+            background-repeat: repeat, repeat;
+        } */
+        .event {
+            /* font-size: 3em; */
+            background-image: url(/public/img/gif/tunnel.gif);
+            background-repeat: repeat;
+            background-size: auto;
+            background-clip: text;
+            -moz-background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div ID="app">
+
+        <header style="padding:0;">
+            <section id="title" style="text-align: center;">
+                <h1>{{ title }}</h1>
+                <iframe src="/public/aud/mp3/1500ms_silence.mp3" allow="autoplay" id="silence"
+                    style="display: none"></iframe>
+                <audio id="soundtrack" controls autoplay loop>
+                    <source src="/public/aud/mp3/tmc_soundtrack.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </section>
+
+            <section id="bar" style="text-align: center;">
+                <p>
+                    <a href="#history">Storia</a> |
+                    <a href="#team">Team</a> |
+                    <a href="#games">Giochi</a> |
+                    <a href="#locations">Arene</a> |
+                    <a href="#parties">Eventi</a> |
+                    <a href="#contacts">Contattaci</a>
+                </p>
+            </section>
+        </header>
+
+        <main id="app">
+
+            <div style="padding:3em">
+
+                <article>
+                    <section id="history">
+                        <h2>Storia</h2>
+
+                        <p>
+                            Il team Macinacapre nasce nel 1998 grazie ad un gruppo di amici di Maniago e dintorni che si
+                            trovano
+                            a giocare nei Lan Party della zona ai vari giochi dell'epoca (Doom, Quake, ecc.).
+                        </p>
+                        <p>
+                            Promotore del team ed organizzatore degli eventi è lo storico membro Alessandro
+                            <b>Ishaar</b>
+                            Corona.
+                        </p>
+
+                    </section>
+                </article>
+
+                <article>
+                    <section id="team">
+                        <h2>Team</h2>
+                        <template v-for="(user) in state.users">
+                            <p>
+                                <a :href="'/user/'+user.nick">{{user.nick}}</a> ( {{user.role}} )
+                            </p>
+                            <ul>
+                                <li v-for="(gear) in user.gears">
+                                    {{gear.platform}} {{gear.name}}
+                                </li>
+                            </ul>
+                        </template>
+                    </section>
+                </article>
+
+                <article>
+                    <section id="games">
+                        <h2>Giochi</h2>
+                        <p v-for="game in state.games">
+                            <image :src="game.image"></image>
+                            {{game.name}} {{game.year}} patch {{game.patch}}
+                        </p>
+                    </section>
+                </article>
+
+                <article>
+                    <section id="locations">
+                        <h2>Arene</h2>
+                        <p v-for="location in state.locations">
+                            <a :href="`/location/${location.ID}`">{{location.name}}</a>
+                            {{location.address}}
+                            {{location.town}} <br />
+                            {{location.lan}} -
+                            {{location.seats.length}} postazioni
+                        </p>
+                    </section>
+                </article>
+
+                <article>
+                    <section id="parties">
+                        <h2>Prossimi eventi</h2>
+                        <template v-for="party in state.parties">
+                            <h3 class="event">{{party.name}} </h3>
+                            <p>
+                                {{party.date}} {{party.locationID}} {{party.gameID}}
+                            </p>
+                            <ul>
+                                <li v-for="detail in party.details">
+                                    {{detail}}
+                                </li>
+                            </ul>
+                            <p>
+                                <a :href="`/booking/${party.ID}`">Prenota la tua postazione adesso!</a>
+                            </p>
+                        </template>
+                    </section>
+                </article>
+
+                <article>
+                    <section id="contacts">
+                        <h2>Contattaci</h2>
+                        <p>
+                            Se vuoi entrare a fare parte del Team o se vuoi partecipare ad uno
+                            dei prossimi eventi scrivi una email all'indirizzo: </p>
+                        <p style="text-align: center;">
+                            <a href="mailto:team.macinacapre@gmail.com">team.macinacapre@gmail.com</a>.
+                        </p>
+                    </section>
+                </article>
+
+                <section v-if="state.debug" id="state">
+                    <details>
+                        <summary>Stato dell'applicazione</summary>
+                        <pre>{{ state }}</pre>
+                    </details>
+                </section>
+
+            </div>
+        </main>
+
+        <footer style="padding:0;">
+            <section id="footer" style="padding:0; margin:0; text-align: center; font-size: 0.5em;">
+                <p>
+                    <em>
+                        © 2022 APG: angeli paolo giusto.<br />
+                        Made with Deno + Drash + Vue + Mongo and classless
+                        <a href="https://picocss.com/examples/preview/" target="_blank">Pico Css</a>.
+                    </em>
+                </p>
+            </section>
+        </footer>
+
+
+
+
+    </div>
+    <script>
+        const mountedApp = app.mount('#app');
+    </script>
+    <!-- <script>
+        setTimeout(function () {
+            document.getElementById("soundtrack").play();
+        }, 3000)
+    </script> -->
+</body>
+
+</html>

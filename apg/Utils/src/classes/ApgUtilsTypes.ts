@@ -1,0 +1,2 @@
+
+export type TApgUtilsPercentage = number;

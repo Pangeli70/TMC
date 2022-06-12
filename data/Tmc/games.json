@@ -1,0 +1,18 @@
+[
+  {
+    "ID": "CODMW",
+    "name": "Call of Duty modern warfare",
+    "year": "2019",
+    "patch": "Season three",
+    "image": "/public/img/jpg/COD1.jpg",
+    "modes": ["Deathmatch", "Dominio", "Warzone"]
+  },
+  {
+    "ID": "CODMWII",
+    "name": "Call of Duty modern warfare II",
+    "year": "2022",
+    "patch": "Pre alpha",
+    "image": "/public/img/jpg/COD2.jpg",
+    "modes": ["Deathmatch", "Dominio", "Warzone"]
+  }
+]

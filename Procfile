@@ -1,0 +1,1 @@
+web: deno run --allow-net --allow-read --allow-env --cached-only --unstable --import-map=imports.json server.ts  --port=${PORT} mode=standard isProd=true

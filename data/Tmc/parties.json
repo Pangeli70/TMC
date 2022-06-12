@@ -1,0 +1,48 @@
+[{
+  "ID": "NSPP22",
+  "name": "Non sono Perseidi ma pallottole'22",
+  "date": "15.07.2022",
+  "locationID": "Man",
+  "gameID": "CODMW",
+  "details" : [
+    "Aria condizionata",
+    "Massimo 10 giocatori e 20 spettatori",
+    "Spettatori muniti di sedia pieghevole", 
+    "Birra a caduta 2 pinte 400ml gratis", 
+    "In alternativa 2 bibite in lattina da 300ml gratis", 
+    "Caffè Nespresso gratis", 
+    "Pasti non compresi!!! ",
+    "Premio best scorer della giornata: 50€",
+    "Iscrizione a offerta libera"
+  ],
+  "registrationBegins" : "07:30",
+  "registrationEnds" : "08:30",
+  "startTime":"09:00",
+  "endTime" : "24:00",
+  "bookings": [
+    {
+      "seatID": "P1",
+      "nickName": null,
+      "date": null,
+      "donation": 0
+    },
+    {
+      "seatID": "P2",
+      "nickName": null,
+      "date": null,
+      "sponsorship": 0
+    },
+    {
+      "seatID": "P3",
+      "nickName": null,
+      "date": null,
+      "sponsorship": 0
+    },
+    {
+      "seatID": "P4",
+      "nickName": null,
+      "date": null,
+      "sponsorship": 0
+    }
+  ]
+}]

@@ -1,0 +1,73 @@
+[
+  {
+    "nick": "Ishaar",
+    "role": "Team leader",
+    "gears": [
+      {
+        "name": "Hydra",
+        "platform": "PC",
+        "items": [
+          {
+            "type": "OS",
+            "description": "Windows 11"
+          },
+          {
+            "type": "CPU",
+            "description": "Intel core i7"
+          },
+          {
+            "type": "SRAM",
+            "description": "32GB"
+          },
+          {
+            "type": "GPU",
+            "description": "NVidia RX3080"
+          },
+          {
+            "type": "VRAM",
+            "description": "16GB"
+          }
+        ]
+      }
+    ],
+    "games": [
+      "CODMW",
+      "CODMWII"
+    ]
+  },
+  {
+    "nick": "AngelOfMercy",
+    "role": "Casual player",
+    "gears": [
+      {
+        "name": "Dell",
+        "platform": "PC",
+        "items": [
+          {
+            "type": "OS",
+            "description": "Windows 10"
+          },
+          {
+            "type": "CPU",
+            "description": "Intel core i7"
+          },
+          {
+            "type": "SRAM",
+            "description": "8GB"
+          },
+          {
+            "type": "GPU",
+            "description": "NVidia GTX6020"
+          },
+          {
+            "type": "VRAM",
+            "description": "8GB"
+          }
+        ]
+      }
+    ],
+    "games": [
+      "COD"
+    ]
+  }
+]
