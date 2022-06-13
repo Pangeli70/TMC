@@ -1,6 +1,6 @@
 [{
   "ID": "NSPP22",
-  "name": "Non sono Perseidi ma pallottole'22",
+  "name": "Non sono Perseidi ma RPG '22",
   "date": "15.07.2022",
   "locationID": "Man",
   "gameID": "CODMW",
@@ -16,7 +16,7 @@
     "Iscrizione a offerta libera"
   ],
   "registrationBegins" : "07:30",
-  "registrationEnds" : "08:30",
+  "registrationEnds" : "09:00",
   "startTime":"09:00",
   "endTime" : "24:00",
   "bookings": [

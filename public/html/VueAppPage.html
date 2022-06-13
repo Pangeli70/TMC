@@ -100,11 +100,21 @@
                             <p>
                                 <a :href="'/user/'+user.nick">{{user.nick}}</a> ( {{user.role}} )
                             </p>
-                            <ul>
-                                <li v-for="(gear) in user.gears">
+                            <details v-for="(gear) in user.gears">
+                                <summary>
                                     {{gear.platform}} {{gear.name}}
-                                </li>
-                            </ul>
+                                </summary>
+                                <table>
+                                    <tr v-for="(item) in gear.items">
+                                        <td>
+                                            {{item.type}}
+                                        </td>
+                                        <td>
+                                            {{item.description}}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </details>
                         </template>
                     </section>
                 </article>
@@ -112,23 +122,65 @@
                 <article>
                     <section id="games">
                         <h2>Giochi</h2>
-                        <p v-for="game in state.games">
-                            <image :src="game.image"></image>
-                            {{game.name}} {{game.year}} patch {{game.patch}}
-                        </p>
+
+                        <template v-for="game in state.games">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <image :src="game.image"></image>
+
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            {{game.name}} {{game.year}} patch {{game.patch}}
+                                        </p>
+                                        <details>
+                                            <summary>
+                                                Modalità di gioco
+                                            </summary>
+                                            <ul>
+                                                <li v-for="(mode) in game.modes">
+                                                    {{mode}}
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                        </template>
                     </section>
                 </article>
 
                 <article>
                     <section id="locations">
                         <h2>Arene</h2>
-                        <p v-for="location in state.locations">
-                            <a :href="`/location/${location.ID}`">{{location.name}}</a>
-                            {{location.address}}
-                            {{location.town}} <br />
-                            {{location.lan}} -
-                            {{location.seats.length}} postazioni
-                        </p>
+                        <template v-for="(location) in state.locations">
+                            <p>
+                                <a :href="`/location/${location.ID}`">{{location.name}}</a>
+                                {{location.address}}
+                                {{location.town}} <br />
+                                {{location.lan}}
+                            </p>
+                            <details>
+                                <summary>
+                                    Postazioni
+                                </summary>
+                                <table>
+                                    <tr v-for="(seat) in location.seats">
+                                        <td>
+                                            {{seat.ID}} - {{seat.coordX}}/{{seat.coordY}}
+                                        </td>
+                                        <td>
+                                            {{seat.name}}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </details>
+                        </template>
                     </section>
                 </article>
 
@@ -145,6 +197,8 @@
                                     {{detail}}
                                 </li>
                             </ul>
+                            <p>Registrazione e allestimento postazioni dalle {{party.registrationBegins}} alle {{party.registrationEnds}}</p>
+                            <p>Competizioni dalle {{party.startTime}} alle {{party.endTime}}</p>
                             <p>
                                 <a :href="`/booking/${party.ID}`">Prenota la tua postazione adesso!</a>
                             </p>
@@ -175,19 +229,22 @@
         </main>
 
         <footer style="padding:0;">
-            <section id="footer" style="padding:0; margin:0; text-align: center; font-size: 0.5em;">
-                <p>
+            <section id="footer" style="padding:0; margin:0; text-align: center; ">
+                <p style="font-size: 0.75em;">
                     <em>
-                        © 2022 APG: angeli paolo giusto.<br />
-                        Made with Deno + Drash + Vue + Mongo and classless
-                        <a href="https://picocss.com/examples/preview/" target="_blank">Pico Css</a>.
+                        2022 APG: angeli paolo giusto.<br />
+                        Made with &#10084 using 
+                        <a href="https://deno.land/" target="_blank">Deno</a> + 
+                        <a href="https://drash.land/drash/v2.x/getting-started/introduction" target="_blank">Drash</a> + 
+                        <a href="https://vuejs.org/" target="_blank">Vue 3</a> + 
+                        <a href="https://picocss.com/examples/preview/" target="_blank">Pico Css</a> +
+                        <a href="https://www.mongodb.com/" target="_blank">Mongo</a> + 
+                        <a href="https://www.heroku.com/" target="_blank">Heroku</a> + 
+                        <a href="https://stripe.com/it" target="_blank">Stripe</a>.
                     </em>
                 </p>
             </section>
         </footer>
-
-
-
 
     </div>
     <script>
