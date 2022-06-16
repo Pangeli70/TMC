@@ -165,6 +165,27 @@
                                 {{location.town}} <br />
                                 {{location.lan}}
                             </p>
+                            <p>
+                            <details>
+                                <summary>
+                                    Planimetria
+                                </summary>
+                                <!-- <object type="image/svg+xml" data="/public/img/svg/SalaManiago.svg" width="100%"
+                                    height="100%" style="width: 100%; object-fit: contain;"
+                                    usemap="#planetmap"></object> -->
+                                <map name="planetmap">
+                                    <area  id="venus" shape="circle" coords="200,600,100" alt="Venus" href="venus.htm">
+                                </map>
+
+
+                                <img src="/public/img/svg/SalaManiago.svg" width="100%" 
+                                    height="100%" 
+                                    style="width: 100%; object-fit: contain;"
+                                    usemap="#planetmap">
+                                   
+                            </details>
+                            </p>
+                            <p>
                             <details>
                                 <summary>
                                     Postazioni
@@ -180,6 +201,7 @@
                                     </tr>
                                 </table>
                             </details>
+                            </p>
                         </template>
                     </section>
                 </article>
@@ -197,7 +219,8 @@
                                     {{detail}}
                                 </li>
                             </ul>
-                            <p>Registrazione e allestimento postazioni dalle {{party.registrationBegins}} alle {{party.registrationEnds}}</p>
+                            <p>Registrazione e allestimento postazioni dalle {{party.registrationBegins}} alle
+                                {{party.registrationEnds}}</p>
                             <p>Competizioni dalle {{party.startTime}} alle {{party.endTime}}</p>
                             <p>
                                 <a :href="`/booking/${party.ID}`">Prenota la tua postazione adesso!</a>
@@ -213,7 +236,7 @@
                             Se vuoi entrare a fare parte del Team o se vuoi partecipare ad uno
                             dei prossimi eventi scrivi una email all'indirizzo: </p>
                         <p style="text-align: center;">
-                            <a href="mailto:team.macinacapre@gmail.com">team.macinacapre@gmail.com</a>.
+                            <a href="mailto:info@macinacapre.it">info@macinacapre.it</a>.
                         </p>
                     </section>
                 </article>
@@ -233,13 +256,13 @@
                 <p style="font-size: 0.75em;">
                     <em>
                         2022 APG: angeli paolo giusto.<br />
-                        Made with &#10084 using 
-                        <a href="https://deno.land/" target="_blank">Deno</a> + 
-                        <a href="https://drash.land/drash/v2.x/getting-started/introduction" target="_blank">Drash</a> + 
-                        <a href="https://vuejs.org/" target="_blank">Vue 3</a> + 
+                        Made with &#10084 using
+                        <a href="https://deno.land/" target="_blank">Deno</a> +
+                        <a href="https://drash.land/drash/v2.x/getting-started/introduction" target="_blank">Drash</a> +
+                        <a href="https://vuejs.org/" target="_blank">Vue 3</a> +
                         <a href="https://picocss.com/examples/preview/" target="_blank">Pico Css</a> +
-                        <a href="https://www.mongodb.com/" target="_blank">Mongo</a> + 
-                        <a href="https://www.heroku.com/" target="_blank">Heroku</a> + 
+                        <a href="https://www.mongodb.com/" target="_blank">Mongo</a> +
+                        <a href="https://www.heroku.com/" target="_blank">Heroku</a> +
                         <a href="https://stripe.com/it" target="_blank">Stripe</a>.
                     </em>
                 </p>
@@ -255,6 +278,20 @@
             document.getElementById("soundtrack").play();
         }, 3000)
     </script> -->
+    <script>
+
+        // var pt = svg.createSVGPoint();  // Created once for document
+        function clickOverSvg(aevent) {
+            const pt = {};
+            pt.x = evt.clientX;
+            pt.y = evt.clientY;
+
+            // The cursor point, translated into svg coordinates
+            // var cursorpt = pt.matrixTransform(svg.getScreenCTM().inverse());
+            const msg = "(" + pt.x + ", " + pt.y + ")";
+            alert(msg);
+        }
+    </script>
 </body>
 
 </html>

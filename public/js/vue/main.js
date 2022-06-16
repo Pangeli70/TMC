@@ -10,13 +10,13 @@ const app = createApp(
     {
         data() {
             return {
-                title: 'TMC - Team Macinacapre',
+                title: '( ( 6 ) ) - Team Macinacapre',
                 debug: false,
                 state: {}
             }
         },
         methods: {
-            async getData() {
+            async fetchData() {
                 const response = await fetch("/api/data");
                 this.state = await response.json();
             },
@@ -26,7 +26,10 @@ const app = createApp(
             }
         },
         created() {
-            this.getData();
+            this.fetchData();
         },
+        computed: {
+            
+        }
     }
 )
