@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="48px" height="48px" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:grid x="0" y="0" width="12.5" height="12.5"/>
+    <linearGradient id="gradient-1" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgba(0, 0, 0, 0);"/>
+      <stop offset="0.5" style="stop-color: rgba(0, 41, 94, 0);"/>
+      <stop offset="1" style="stop-color: rgb(16, 149, 193);"/>
+    </linearGradient>
+    <radialGradient id="gradient-1-0" gradientUnits="userSpaceOnUse" cx="250" cy="250" r="250" gradientTransform="matrix(1, 0, 0, 1.14286, 0, -35.71428)" xlink:href="#gradient-1"/>
+    <linearGradient id="gradient-7" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgb(255, 255, 255);"/>
+      <stop offset="1" style="stop-color: rgb(255, 0, 0);"/>
+    </linearGradient>
+    <radialGradient id="gradient-1-1" gradientUnits="userSpaceOnUse" cx="250" cy="250" r="250" gradientTransform="matrix(1, 0, 0, 1.14286, 0, -35.71428)" xlink:href="#gradient-1"/>
+  </defs>
+  <rect width="500" height="500" style="fill: rgb(17, 25, 31);"/>
+  <g transform="matrix(1, 0, 0, 1, -24.999998, 0)" style="visibility: hidden;">
+    <g>
+      <path style="stroke-width: 4px; stroke: rgb(0, 0, 0); fill: rgb(43, 158, 208);" d="M 337.5 487.5 C 338.449 445.706 325 412.5 325 387.5 C 325 350 346.574 269.638 350 250 C 350 287.5 372.795 310.069 375 312.5 C 378.612 316.482 399.307 334.093 401.121 337.5 C 406.063 346.784 404.369 351.617 425 362.5 C 433.16 366.805 437.225 372.721 445.759 379.423 C 450.607 383.23 457.334 382.547 457.424 378.56 C 457.571 372.092 440.652 360.081 442.682 360.558 C 446.328 361.414 462.047 371.152 464.828 373.544 C 469.385 377.464 476.021 374.049 475.178 369.022 C 473.505 359.052 444.328 346.635 445.689 345.261 C 447.594 343.338 472.223 354.881 474.179 355.643 C 479.35 357.658 484.596 354.396 484.014 350 C 482.427 338.009 445.069 331.961 445.592 330.905 C 450.5 327.455 470.201 331.964 475.072 333.839 C 484.583 337.5 485.773 328.841 483.229 325 C 476.91 315.461 455.318 315.224 447.873 315.863 C 426.659 317.685 441.587 308.467 443.494 304.819 C 445.661 300.674 445.316 297.058 438.973 296.109 C 432.04 295.072 431.552 296.31 424.346 304.624 C 421.072 308.402 412.5 300 412.5 300 L 400 287.5 C 400 287.5 389.399 232.597 387.5 225 C 375 175 337.5 175 325 175 C 312.5 175 275 162.5 275 137.5 C 275 125 300 112.5 300 75 C 300 37.5 287.5 12.5 250 12.5 C 212.5 12.5 200 37.5 200 75 C 200 112.5 225 118.75 225 137.5 C 225 168.75 211.489 158.988 162.5 175 C 141.702 181.798 135.262 185.999 125 200 C 117.611 210.082 100 250 100 275 C 100 292.678 112.5 300 150 287.5 C 161.859 283.547 150 287.5 162.5 275 C 174.692 334.791 180.988 373.669 175 400 C 169.012 426.331 162.5 487.5 162.5 487.5 C 162.5 487.5 287.5 487.5 337.5 487.5 Z"/>
+      <path style="stroke: rgb(0, 0, 0); fill: rgb(43, 158, 208); stroke-width: 4px;" d="M 150 200 C 153.104 193.927 185.44 201.335 200 207.403 C 204.124 209.122 206.918 214.322 207.601 218.846 C 208.038 221.74 207.061 229.229 207.473 229.965 C 211.341 236.873 206.723 258.336 197.94 255.053 C 195.982 254.321 190.681 238.355 190.681 237.5 C 190.681 233.827 196.904 226.495 195.176 223.038 C 194.685 222.057 150 203.244 150 200 Z"/>
+      <path style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255); stroke-linejoin: bevel;" d="M 179.253 296.338 L 198.213 198.144 L 204.488 193.524 L 209.449 165.766 L 206.381 160.327 L 195.791 158.543 L 192.811 146.823 L 185.525 155.894 L 175 154.305 L 170.432 157.507 L 165.092 185.645 L 168.336 191.696 L 154.987 291.789 C 154.987 302.426 176.018 303.843 179.253 296.338 Z"/>
+      <path style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(43, 158, 208);" d="M 130.579 234.524 C 130.245 229.748 138.126 222.417 138.126 222.417 C 142.511 215.84 137.761 213.205 139.817 208.601 C 140.735 206.546 146.017 194.982 158.428 202.524 C 177.964 214.396 194.193 212.157 197.079 217.852 C 199.384 222.399 200.403 228.579 194.071 232.717 C 190.358 235.144 167.051 226.308 158.694 225 C 156.832 224.709 155.851 226.287 157.128 228.041 C 162.723 235.724 194.819 237.647 195.634 238.205 C 201.877 242.479 198.395 250.101 194.986 253.469 C 189.161 259.224 150.996 247.97 150.996 247.085 C 162.183 255.4 190.188 256.947 194.826 257.143 C 201.506 257.425 199.136 272.419 191.742 272.961 C 175.49 274.153 148.465 266.683 148.465 266.683 C 164.885 275.038 189.214 274.165 189.822 275 C 193.102 279.505 191.991 287.105 187.897 288.205 C 175.069 291.65 156.464 287.586 143.396 281.802 C 132.949 277.178 139.193 269.275 132.415 263.205 C 129.475 260.572 129.958 253.404 131.419 250.705 C 135.298 243.539 131.088 241.809 130.579 234.524 Z"/>
+      <path style="stroke: rgb(0, 0, 0); stroke-width: 4px; stroke-linecap: round; stroke-linejoin: round; fill: rgb(255, 255, 255);" d="M 168.668 192.44 L 175 202.155 L 170.406 231.364 C 170.918 237.318 178.731 237.359 181.217 234.202 L 188.67 204.766 L 197.251 197.752 L 168.668 192.44 Z"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -12.5, 0)">
+      <circle style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255);" cx="287.157" cy="249.29" r="62.499"/>
+      <circle style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255);" cx="287.501" cy="250.001" r="49.999"/>
+      <circle style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255);" cx="287.503" cy="250.001" r="37.501"/>
+      <circle style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255);" cx="287.503" cy="250.001" r="25"/>
+      <circle style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(0, 255, 0);" cx="287.503" cy="250.001" r="12.5"/>
+      <line style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255);" x1="287.316" y1="186.789" x2="287.501" y2="312.5"/>
+      <line style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255);" x1="224.658" y1="250.221" x2="350" y2="250"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -0.000977, -12.500997)" style="">
+      <circle style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255);" cx="250" cy="75" r="37.501"/>
+      <circle style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255);" cx="250" cy="75" r="25"/>
+      <circle style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(0, 255, 0);" cx="250" cy="75" r="12.5"/>
+      <line style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255);" x1="249.824" y1="36.84" x2="249.977" y2="112.5"/>
+      <line style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(255, 255, 255);" x1="212.5" y1="75" x2="287.5" y2="75"/>
+    </g>
+    <g transform="matrix(0.99912, 0, 0, 0.986933, 0.154013, 14.460979)" style="">
+      <circle style="stroke: rgb(0, 0, 0); stroke-width: 3.94744px; fill: rgb(0, 255, 0);" cx="187.5" cy="162.499" r="12.5" transform="matrix(1.000882, 0, 0, 1.013243, -0.154399, -1.986389)"/>
+      <line style="stroke: rgb(0, 0, 0); stroke-width: 3.94744px; stroke-linecap: round; fill: rgb(0, 255, 0);" x1="187.32" y1="149.999" x2="187.511" y2="175.33"/>
+      <line style="stroke: rgb(0, 0, 0); stroke-width: 3.94744px; stroke-linecap: round; fill: rgb(0, 255, 0);" x1="200.022" y1="162.665" x2="175" y2="162.665"/>
+    </g>
+  </g>
+  <circle style="fill: rgb(255, 0, 0); visibility: hidden;" cx="275" cy="300" r="12.5"/>
+  <circle style="fill: rgb(255, 0, 0); visibility: hidden;" cx="212.5" cy="225" r="12.5"/>
+  <circle style="fill: rgb(255, 0, 0); visibility: hidden;" cx="275" cy="225" r="12.5"/>
+  <circle style="fill: rgb(255, 0, 0); visibility: hidden;" cx="250" cy="250" r="12.5"/>
+  <circle style="fill: rgb(255, 0, 0); visibility: hidden;" cx="200" cy="37.5" r="12.5"/>
+  <circle style="fill: rgb(255, 0, 0); visibility: hidden;" cx="250" cy="75" r="12.5"/>
+  <circle style="fill: rgb(255, 0, 0); visibility: hidden;" cx="225" cy="62.5" r="12.5"/>
+  <circle style="fill: rgb(255, 0, 0); visibility: hidden;" cx="162.5" cy="175" r="12.5"/>
+  <rect y="50" width="500" height="400" rx="92.8" ry="92.8" style="fill: url(#gradient-1-0); stroke: url(#gradient-1-1);"/>
+  <g style="" transform="matrix(1, 0, 0, 1, 0.000002, 0.000008)">
+    <circle style="fill: none; stroke-width: 25px; stroke: rgb(255, 255, 255);" cx="250" cy="300" r="50"/>
+    <path style="stroke-linecap: round; fill: none; stroke-width: 25px; stroke: rgb(255, 255, 255);" d="M 200 284.044 C 200 248.606 200 223.051 200 197.866 C 200 134.044 300 134.044 300 197.866"/>
+    <path style="fill: none; stroke-linecap: round; stroke-width: 25px; stroke: rgb(255, 255, 255);" d="M 301.344 100.824 C 336.3 100.07 375 138.167 375 188.167 L 375 313.701 C 375 363.701 336.922 400 300 400"/>
+    <path style="fill: none; stroke-linecap: round; stroke-width: 25px; stroke: rgb(255, 255, 255);" d="M 388.8 100.8 C 423.8 100.1 462.5 138.2 462.5 188.2 L 462.5 313.7 C 462.5 363.7 424.4 400 387.5 400"/>
+    <path style="fill: none; stroke-linecap: round; stroke-width: 25px; stroke: rgb(255, 255, 255);" d="M 38.8 100.8 C 73.8 100.1 112.5 138.2 112.5 188.2 L 112.5 313.7 C 112.5 363.7 74.4 400 37.5 400" transform="matrix(-1, 0, 0, -1, 150, 500.7905)"/>
+    <path style="fill: none; stroke-linecap: round; stroke-width: 25px; stroke: rgb(255, 255, 255);" d="M 126.3 100 C 161.3 99.3 200 137.4 200 187.4 L 200 312.9 C 200 362.9 161.9 399.2 125 399.2" transform="matrix(-1, 0, 0, -1, 325, 499.19052)"/>
+  </g>
+</svg>

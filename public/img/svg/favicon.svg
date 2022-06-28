@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="48px" height="48px" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:grid x="0" y="0" width="12.5" height="12.5"/>
+    <linearGradient id="gradient-1" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgba(0, 0, 0, 0)"/>
+      <stop offset="0.5" style="stop-color: rgba(0, 41, 94, 0)"/>
+      <stop offset="1" style="stop-color: rgb(16, 149, 193)"/>
+    </linearGradient>
+    <radialGradient id="gradient-1-0" gradientUnits="userSpaceOnUse" cx="250" cy="250" r="250" gradientTransform="matrix(1, 0, 0, 1.14286, 0, -35.71428)" xlink:href="#gradient-1"/>
+    <radialGradient id="gradient-1-1" gradientUnits="userSpaceOnUse" cx="250" cy="250" r="250" gradientTransform="matrix(1, 0, 0, 1.14286, 0, -35.71428)" xlink:href="#gradient-1"/>
+  </defs>
+  <rect width="500" height="400" style="fill: rgb(17, 25, 31);" y="50" rx="95.4" ry="95.4"/>
+  <rect width="500" height="400" rx="92.8" ry="92.8" style="fill: url(#gradient-1-0); stroke: url(#gradient-1-1)" y="50"/>
+  <g id="logo" style="">
+    <circle style="fill: none; stroke-width: 25px; stroke: rgb(255, 255, 255)" cx="250" cy="300" r="50"/>
+    <path style="stroke-linecap: round; fill: none; stroke-width: 25px; stroke: rgb(255, 255, 255)" d="M 200 284.044 C 200 248.606 200 223.051 200 197.866 C 200 134.044 300 134.044 300 197.866"/>
+    <path style="fill: none; stroke-linecap: round; stroke-width: 25px; stroke: rgb(255, 255, 255)" d="M 301.344 100.824 C 336.3 100.07 375 138.167 375 188.167 L 375 313.701 C 375 363.701 336.922 400 300 400"/>
+    <path style="fill: none; stroke-linecap: round; stroke-width: 25px; stroke: rgb(255, 255, 255)" d="M 388.8 100.8 C 423.8 100.1 462.5 138.2 462.5 188.2 L 462.5 313.7 C 462.5 363.7 424.4 400 387.5 400"/>
+    <path style="fill: none; stroke-linecap: round; stroke-width: 25px; stroke: rgb(255, 255, 255)" d="M 38.8 100.8 C 73.8 100.1 112.5 138.2 112.5 188.2 L 112.5 313.7 C 112.5 363.7 74.4 400 37.5 400" transform="matrix(-1, 0, 0, -1, 150, 500.7905)"/>
+    <path style="fill: none; stroke-linecap: round; stroke-width: 25px; stroke: rgb(255, 255, 255)" d="M 126.3 100 C 161.3 99.3 200 137.4 200 187.4 L 200 312.9 C 200 362.9 161.9 399.2 125 399.2" transform="matrix(-1, 0, 0, -1, 325, 499.19052)"/>
+  </g>
+</svg>

@@ -10,7 +10,7 @@ const app = createApp(
     {
         data() {
             return {
-                title: '( ( 6 ) ) - Team Macinacapre',
+                title: 'Team Macinacapre',
                 debug: false,
                 state: {}
             }
@@ -29,7 +29,7 @@ const app = createApp(
             this.fetchData();
         },
         computed: {
-            
+
         }
     }
 )

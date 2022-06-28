@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" ,>
-
-<head>
+  <head>
     <title>Team Macinacapre</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="author" content="APG Angeli Paolo Giusto">
-    <meta name="description" content="Team Macinacapre">
-    <meta name="generator" content="Deno+Drash+Vue+Mongo">
-    <meta name="keywords" content="Deno, Drash, Vue, Mongo, APG, Angeli Paolo, Paolo Angeli">
-    <meta name="application-name" content="APG-TMC">
+    <meta name="author" content="APG Angeli Paolo Giusto" />
+    <meta name="description" content="Team Macinacapre" />
+    <meta name="generator" content="Deno+Drash+Vue+Mongo" />
+    <meta name="keywords" content="Deno, Drash, Vue, Mongo, APG, Angeli Paolo, Paolo Angeli" />
+    <meta name="application-name" content="APG-TMC" />
 
     <!-- Favicon -->
-    <link rel='shortcut icon' type='image/x-icon' href='/public/ico/favicon.ico'>
+    <link rel="shortcut icon" type="image/x-icon" href="/public/ico/favicon.ico" />
 
     <!-- Css -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css"> -->
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-    <link rel="stylesheet" href="/public/css/picoCustom.css">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="/public/css/picoCustom.css" />
 
     <!-- Vue.js -->
     <script src="https://unpkg.com/vue@3"></script>
@@ -28,270 +27,276 @@
 
     <!-- background -->
     <style>
-        /* html {
+      /* html {
             background-image: url('/public/img/jpg/background1.jpg');
             background-repeat: repeat, repeat;
         } */
-        .event {
-            /* font-size: 3em; */
-            background-image: url(/public/img/gif/tunnel.gif);
-            background-repeat: repeat;
-            background-size: auto;
-            background-clip: text;
-            -moz-background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
+      .partyBackGround {
+        /* font-size: 3em; */
+        background-image: url(/public/img/gif/tunnel.gif);
+        background-repeat: repeat;
+        background-size: auto;
+        background-clip: text;
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div ID="app">
+  <body>
+    <div id="app">
+      <header style="padding: 0">
+        <section id="title" style="text-align: center">
+          <table>
+            <tr>
+              <td style="width: 2%">
+                <object
+                  style="background-color: rgba(255, 255, 255, 0)"
+                  data="/public/img/svg/tmc.svg"
+                  width="128"
+                  height="128"
+                ></object>
+              </td>
+              <td>
+                <h1 style="margin-bottom: 0px"><a id="title-link" href="/">{{ title }}</a><br /></h1>
+              </td>
+            </tr>
+          </table>
+          <h1></h1>
+          <audio id="soundtrack" controls autoplay loop volume="0.2">
+            <source src="/public/aud/mp3/tmc_soundtrack.mp3" type="audio/mpeg" />
+            Your browser does not support the audio tag.
+          </audio>
+        </section>
 
-        <header style="padding:0;">
-            <section id="title" style="text-align: center;">
-                <h1>{{ title }}</h1>
-                <iframe src="/public/aud/mp3/1500ms_silence.mp3" allow="autoplay" id="silence"
-                    style="display: none"></iframe>
-                <audio id="soundtrack" controls autoplay loop>
-                    <source src="/public/aud/mp3/tmc_soundtrack.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
+        <section id="bar" style="text-align: center">
+          <p>
+            <a href="#history">Storia</a> | <a href="#team">Team</a> | <a href="#games">Giochi</a> |
+            <a href="#locations">Arene</a> | <a href="#parties">Eventi</a> |
+            <a href="#contacts">Contattaci</a>
+          </p>
+        </section>
+      </header>
+
+      <main id="app">
+        <div style="padding: 3em">
+          <article>
+            <section id="history">
+              <h2>Storia</h2>
+
+              <p>
+                Il team Macinacapre nasce nel 1998 grazie ad un gruppo di amici di Maniago e dintorni che si trovano a
+                giocare nei Lan Party della zona ai vari giochi dell'epoca (Doom, Quake, ecc.).
+              </p>
+              <p>
+                Promotore del team ed organizzatore degli eventi è lo storico membro Alessandro
+                <b>Ishaar</b>
+                Corona.
+              </p>
             </section>
+          </article>
 
-            <section id="bar" style="text-align: center;">
+          <article>
+            <section id="team">
+              <h2>Team</h2>
+              <template v-for="(user) in state.users">
+                <p><a :href="'/user/'+user.nick">{{user.nick}}</a> ( {{user.role}} )</p>
+                <details v-for="(gear) in user.gears">
+                  <summary>{{gear.platform}} {{gear.name}}</summary>
+                  <table>
+                    <tr v-for="(item) in gear.items">
+                      <td>{{item.type}}</td>
+                      <td>{{item.description}}</td>
+                    </tr>
+                  </table>
+                </details>
+              </template>
+            </section>
+            <!-- Modal -->
+            <section id="modal">
+              <h2>Modal</h2>
+              <button class="contrast" data-target="modal-example" onclick="toggleModal(event)">
+                Launch demo modal
+              </button>
+            </section>
+            <!-- ./ Modal -->
+          </article>
+
+          <article>
+            <section id="games">
+              <h2>Giochi</h2>
+
+              <template v-for="game in state.games">
+                <table>
+                  <tr>
+                    <td>
+                      <p>
+                        <image :src="game.image"></image>
+                      </p>
+                    </td>
+                    <td>
+                      <p>{{game.name}} {{game.year}} patch {{game.patch}}</p>
+                      <details>
+                        <summary>Modalità di gioco</summary>
+                        <ul>
+                          <li v-for="(mode) in game.modes">{{mode}}</li>
+                        </ul>
+                      </details>
+                    </td>
+                  </tr>
+                </table>
+              </template>
+            </section>
+          </article>
+
+          <article>
+            <section id="locations">
+              <h2>Arene</h2>
+              <template v-for="(location) in state.locations">
                 <p>
-                    <a href="#history">Storia</a> |
-                    <a href="#team">Team</a> |
-                    <a href="#games">Giochi</a> |
-                    <a href="#locations">Arene</a> |
-                    <a href="#parties">Eventi</a> |
-                    <a href="#contacts">Contattaci</a>
+                  <a :href="`/location/${location.ID}`">{{location.name}}</a>
+                  {{location.address}} {{location.town}} <br />
+                  {{location.lan}}
                 </p>
-            </section>
-        </header>
-
-        <main id="app">
-
-            <div style="padding:3em">
-
-                <article>
-                    <section id="history">
-                        <h2>Storia</h2>
-
-                        <p>
-                            Il team Macinacapre nasce nel 1998 grazie ad un gruppo di amici di Maniago e dintorni che si
-                            trovano
-                            a giocare nei Lan Party della zona ai vari giochi dell'epoca (Doom, Quake, ecc.).
-                        </p>
-                        <p>
-                            Promotore del team ed organizzatore degli eventi è lo storico membro Alessandro
-                            <b>Ishaar</b>
-                            Corona.
-                        </p>
-
-                    </section>
-                </article>
-
-                <article>
-                    <section id="team">
-                        <h2>Team</h2>
-                        <template v-for="(user) in state.users">
-                            <p>
-                                <a :href="'/user/'+user.nick">{{user.nick}}</a> ( {{user.role}} )
-                            </p>
-                            <details v-for="(gear) in user.gears">
-                                <summary>
-                                    {{gear.platform}} {{gear.name}}
-                                </summary>
-                                <table>
-                                    <tr v-for="(item) in gear.items">
-                                        <td>
-                                            {{item.type}}
-                                        </td>
-                                        <td>
-                                            {{item.description}}
-                                        </td>
-                                    </tr>
-                                </table>
-                            </details>
-                        </template>
-                    </section>
-                </article>
-
-                <article>
-                    <section id="games">
-                        <h2>Giochi</h2>
-
-                        <template v-for="game in state.games">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <p>
-                                            <image :src="game.image"></image>
-
-                                        </p>
-                                    </td>
-                                    <td>
-                                        <p>
-                                            {{game.name}} {{game.year}} patch {{game.patch}}
-                                        </p>
-                                        <details>
-                                            <summary>
-                                                Modalità di gioco
-                                            </summary>
-                                            <ul>
-                                                <li v-for="(mode) in game.modes">
-                                                    {{mode}}
-                                                </li>
-                                            </ul>
-                                        </details>
-                                    </td>
-                                </tr>
-                            </table>
-
-
-                        </template>
-                    </section>
-                </article>
-
-                <article>
-                    <section id="locations">
-                        <h2>Arene</h2>
-                        <template v-for="(location) in state.locations">
-                            <p>
-                                <a :href="`/location/${location.ID}`">{{location.name}}</a>
-                                {{location.address}}
-                                {{location.town}} <br />
-                                {{location.lan}}
-                            </p>
-                            <p>
-                            <details>
-                                <summary>
-                                    Planimetria
-                                </summary>
-                                <!-- <object type="image/svg+xml" data="/public/img/svg/SalaManiago.svg" width="100%"
+                <p>
+                  <details>
+                    <summary>Planimetria</summary>
+                    <!-- <object type="image/svg+xml" data="/public/img/svg/SalaManiago.svg" width="100%"
                                     height="100%" style="width: 100%; object-fit: contain;"
                                     usemap="#planetmap"></object> -->
-                                <map name="planetmap">
-                                    <area  id="venus" shape="circle" coords="200,600,100" alt="Venus" href="venus.htm">
-                                </map>
+                    <map name="planetmap">
+                      <area id="venus" shape="circle" coords="200,600,100" alt="Venus" href="venus.htm" />
+                    </map>
 
+                    <img
+                      src="/public/img/svg/SalaManiago.svg"
+                      width="100%"
+                      height="100%"
+                      style="width: 100%; object-fit: contain"
+                      usemap="#planetmap"
+                    />
 
-                                <img src="/public/img/svg/SalaManiago.svg" width="100%" 
-                                    height="100%" 
-                                    style="width: 100%; object-fit: contain;"
-                                    usemap="#planetmap">
-                                   
-                            </details>
-                            </p>
-                            <p>
-                            <details>
-                                <summary>
-                                    Postazioni
-                                </summary>
-                                <table>
-                                    <tr v-for="(seat) in location.seats">
-                                        <td>
-                                            {{seat.ID}} - {{seat.coordX}}/{{seat.coordY}}
-                                        </td>
-                                        <td>
-                                            {{seat.name}}
-                                        </td>
-                                    </tr>
-                                </table>
-                            </details>
-                            </p>
-                        </template>
-                    </section>
-                </article>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.7368314456457!2d12.708379550235637!3d46.17589419359201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4779837288e6e9a7%3A0xc195765daea7a988!2sVia%20Colvera%2C%2073%2C%2033085%20Maniago%20PN!5e0!3m2!1sit!2sit!4v1656455125030!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                <article>
-                    <section id="parties">
-                        <h2>Prossimi eventi</h2>
-                        <template v-for="party in state.parties">
-                            <h3 class="event">{{party.name}} </h3>
-                            <p>
-                                {{party.date}} {{party.locationID}} {{party.gameID}}
-                            </p>
-                            <ul>
-                                <li v-for="detail in party.details">
-                                    {{detail}}
-                                </li>
-                            </ul>
-                            <p>Registrazione e allestimento postazioni dalle {{party.registrationBegins}} alle
-                                {{party.registrationEnds}}</p>
-                            <p>Competizioni dalle {{party.startTime}} alle {{party.endTime}}</p>
-                            <p>
-                                <a :href="`/booking/${party.ID}`">Prenota la tua postazione adesso!</a>
-                            </p>
-                        </template>
-                    </section>
-                </article>
-
-                <article>
-                    <section id="contacts">
-                        <h2>Contattaci</h2>
-                        <p>
-                            Se vuoi entrare a fare parte del Team o se vuoi partecipare ad uno
-                            dei prossimi eventi scrivi una email all'indirizzo: </p>
-                        <p style="text-align: center;">
-                            <a href="mailto:info@macinacapre.it">info@macinacapre.it</a>.
-                        </p>
-                    </section>
-                </article>
-
-                <section v-if="state.debug" id="state">
-                    <details>
-                        <summary>Stato dell'applicazione</summary>
-                        <pre>{{ state }}</pre>
-                    </details>
-                </section>
-
-            </div>
-        </main>
-
-        <footer style="padding:0;">
-            <section id="footer" style="padding:0; margin:0; text-align: center; ">
-                <p style="font-size: 0.75em;">
-                    <em>
-                        2022 APG: angeli paolo giusto.<br />
-                        Made with &#10084 using
-                        <a href="https://deno.land/" target="_blank">Deno</a> +
-                        <a href="https://drash.land/drash/v2.x/getting-started/introduction" target="_blank">Drash</a> +
-                        <a href="https://vuejs.org/" target="_blank">Vue 3</a> +
-                        <a href="https://picocss.com/examples/preview/" target="_blank">Pico Css</a> +
-                        <a href="https://www.mongodb.com/" target="_blank">Mongo</a> +
-                        <a href="https://www.heroku.com/" target="_blank">Heroku</a> +
-                        <a href="https://stripe.com/it" target="_blank">Stripe</a>.
-                    </em>
+                    <img src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=dJZhwhSdflcy-JfcgMIbVA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=220.74396&pitch=0&thumbfov=100">
+                  </details>
                 </p>
+                <p>
+                  <details>
+                    <summary>Postazioni</summary>
+                    <table>
+                      <tr v-for="(seat) in location.seats">
+                        <td>{{seat.ID}} - {{seat.coordX}}/{{seat.coordY}}</td>
+                        <td>{{seat.name}}</td>
+                      </tr>
+                    </table>
+                  </details>
+                </p>
+              </template>
             </section>
-        </footer>
+          </article>
 
+          <article>
+            <section id="parties">
+              <h2>Prossimi eventi</h2>
+              <template v-for="party in state.parties">
+                <h3 class="partyBackGround">{{party.name}}</h3>
+                <p>{{party.date}} {{party.locationID}} {{party.gameID}}</p>
+                <ul>
+                  <li v-for="detail in party.details">{{detail}}</li>
+                </ul>
+                <p>
+                  Registrazione e allestimento postazioni dalle {{party.registrationBegins}} alle
+                  {{party.registrationEnds}}
+                </p>
+                <p>Competizioni dalle {{party.startTime}} alle {{party.endTime}}</p>
+                <p>
+                  <a :href="`/booking/${party.ID}`">Prenota la tua postazione adesso!</a>
+                </p>
+              </template>
+            </section>
+          </article>
+
+          <article>
+            <section id="contacts">
+              <h2>Contattaci</h2>
+              <p>
+                Se vuoi entrare a fare parte del Team o se vuoi partecipare ad uno dei prossimi eventi scrivi una email
+                all'indirizzo:
+              </p>
+              <p style="text-align: center"><a href="mailto:info@macinacapre.it">info@macinacapre.it</a>.</p>
+            </section>
+          </article>
+
+          <section v-if="state.debug" id="state">
+            <details>
+              <summary>Stato dell'applicazione</summary>
+              <pre>{{ state }}</pre>
+            </details>
+          </section>
+        </div>
+      </main>
+
+      <footer style="padding: 0">
+        <section id="footer" style="padding: 0; margin: 0; text-align: center">
+          <p style="font-size: 0.75em">
+            <em>
+              2022 APG: angeli paolo giusto.<br />
+              Made with (love) using
+              <a href="https://deno.land/" target="_blank">Deno</a> +
+              <a href="https://drash.land/drash/v2.x/getting-started/introduction" target="_blank">Drash</a> +
+              <a href="https://vuejs.org/" target="_blank">Vue 3</a> +
+              <a href="https://picocss.com/examples/preview/" target="_blank">Pico Css</a> +
+              <a href="https://www.mongodb.com/" target="_blank">Mongo</a> +
+              <a href="https://www.heroku.com/" target="_blank">Heroku</a> +
+              <a href="https://stripe.com/it" target="_blank">Stripe</a>.
+            </em>
+          </p>
+        </section>
+      </footer>
+      <!-- Modal example -->
+      <dialog id="modal-example">
+        <article>
+          <a
+            href="#close"
+            aria-label="Close"
+            class="close"
+            data-target="modal-example"
+            onclick="toggleModal(event)"
+          ></a>
+          <h3>Confirm your action!</h3>
+          <p>
+            Cras sit amet maximus risus. Pellentesque sodales odio sit amet augue finibus pellentesque. Nullam finibus
+            risus non semper euismod.
+          </p>
+          <footer>
+            <a href="#cancel" role="button" class="secondary" data-target="modal-example" onclick="toggleModal(event)"
+              >Cancel</a
+            ><a href="#confirm" role="button" data-target="modal-example" onclick="toggleModal(event)">Confirm</a>
+          </footer>
+        </article>
+      </dialog>
+      <!-- ./ Modal example -->
     </div>
+    <!-- Vue mounting -->
     <script>
-        const mountedApp = app.mount('#app');
+      const mountedApp = app.mount("#app");
     </script>
-    <!-- <script>
-        setTimeout(function () {
-            document.getElementById("soundtrack").play();
-        }, 3000)
-    </script> -->
+    <!-- Pico Modal -->
+    <script src="/public/js/pico/pico_modal.js"></script>
     <script>
+      // var pt = svg.createSVGPoint();  // Created once for document
+      function clickOverSvg(aevent) {
+        const pt = {};
+        pt.x = evt.clientX;
+        pt.y = evt.clientY;
 
-        // var pt = svg.createSVGPoint();  // Created once for document
-        function clickOverSvg(aevent) {
-            const pt = {};
-            pt.x = evt.clientX;
-            pt.y = evt.clientY;
-
-            // The cursor point, translated into svg coordinates
-            // var cursorpt = pt.matrixTransform(svg.getScreenCTM().inverse());
-            const msg = "(" + pt.x + ", " + pt.y + ")";
-            alert(msg);
-        }
+        // The cursor point, translated into svg coordinates
+        // var cursorpt = pt.matrixTransform(svg.getScreenCTM().inverse());
+        const msg = "(" + pt.x + ", " + pt.y + ")";
+        alert(msg);
+      }
     </script>
-</body>
-
+  </body>
 </html>
